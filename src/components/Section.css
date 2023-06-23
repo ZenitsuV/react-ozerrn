@@ -1,0 +1,13 @@
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 5px;
+  border: solid 1px #d9d9d9;
+  box-shadow: 2px 3px 5px 1px rgba(199, 199, 199, 0.62);
+  background-color: #ffffff;
+  flex: 1;
+}
+
+section {
+  margin: 5px 0;
+}

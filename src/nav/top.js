@@ -1,6 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Topnav = () => {
+  const location = useLocation();
+
+  const currentReportName =
+    location.pathname.split('/')[1].charAt(0).toUpperCase() +
+    location.pathname.split('/')[1].slice(1);
+
   return (
     <div className="topNavBar">
       <div className="logo">
@@ -10,7 +17,7 @@ const Topnav = () => {
         />
       </div>
       <div className="topNavBar_content">
-        <div className="report_name"> Report Name </div>
+        <div className="report_name">{currentReportName + ' Profile'}</div>
         <div className="username">Username</div>
         <div className="export">
           <img

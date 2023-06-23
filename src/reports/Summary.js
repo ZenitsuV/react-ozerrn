@@ -4,6 +4,7 @@ import PeriodToggle from '../components/PeriodToggle';
 import KPIbox from '../components/KPIbox';
 import Chart from '../components/Chart';
 import Toggle from '../components/Toggle';
+import Section from '../components/Section';
 
 const Summary = () => {
   const [selectedMarket, setSelectedMarket] = useState('AM Market');
@@ -161,7 +162,7 @@ const Summary = () => {
         </section>
       </section>
 
-      <section id="performance_trend" class="ts_performance_trend">
+      <Section id="performance_trend">
         <div class="ts_pt_header">
           <span class="RSM_HeaderText" id="Summary_Chart_Header">
             {`Competitive Trend - Product ${selectedProduct} - ${selectedKPI}`}
@@ -174,7 +175,7 @@ const Summary = () => {
         <div id="SummaryTrendChart" class="Summary_TrendChart">
           <Chart />
         </div>
-      </section>
+      </Section>
     </div>
   );
 };

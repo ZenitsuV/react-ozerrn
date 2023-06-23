@@ -1,10 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidenav = () => {
+  const location = useLocation();
   return (
     <div className="sideNavBar">
-      <div className="side_report_list">
+      <div
+        className="side_report_list"
+        style={
+          location.pathname == '/summary' ? { backgroundColor: '#5c4080' } : {}
+        }
+      >
         <NavLink
           to="/summary"
           style={{ textDecoration: 'none', color: 'white' }}
@@ -17,7 +23,12 @@ const Sidenav = () => {
           <span className="side_report_name">Geography Summary</span>
         </NavLink>
       </div>
-      <div className="side_report_list">
+      <div
+        className="side_report_list"
+        style={
+          location.pathname == '/tracker' ? { backgroundColor: '#5c4080' } : {}
+        }
+      >
         <NavLink
           to="/tracker"
           style={{ textDecoration: 'none', color: 'white' }}
@@ -30,7 +41,12 @@ const Sidenav = () => {
           <span className="side_report_name">Tracker</span>
         </NavLink>
       </div>
-      <div className="side_report_list">
+      <div
+        className="side_report_list"
+        style={
+          location.pathname == '/profile' ? { backgroundColor: '#5c4080' } : {}
+        }
+      >
         <NavLink
           to="/profile"
           style={{ textDecoration: 'none', color: 'white' }}

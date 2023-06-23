@@ -1,0 +1,6 @@
+.report_container {
+  font-family: 'Verdana, Helvetica, Arial, sans-serif';
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+}
