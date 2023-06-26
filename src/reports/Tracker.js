@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Tracker.css';
 import PeriodToggle from '../components/PeriodToggle';
 import Section from '../components/Section';
+import MTable from '../components/MTable';
 
 const Tracker = () => {
   const [selectedMarket, setSelectedMarket] = useState('AM Market');
@@ -38,7 +39,9 @@ const Tracker = () => {
         </div>
       </section>
       <Section id="tracker_grid">
-        <div id="TrackerGrid" class="TrackerGrid"></div>
+        <div id="TrackerGrid" class="TrackerGrid">
+          <MTable />
+        </div>
       </Section>
     </div>
   );
