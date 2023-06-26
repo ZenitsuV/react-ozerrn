@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Tracker.css';
+import '../components/bootstrap/bootstrap.min.css'
 import PeriodToggle from '../components/PeriodToggle';
 import Section from '../components/Section';
 import { HCPTrend } from '../data/HCPTrend';
@@ -42,7 +43,7 @@ const Tracker = () => {
       </section>
       <Section id="tracker_grid">
         <div id="TrackerGrid" class="TrackerGrid">
-          <table class="table">
+          <table class="table table-hover">
             <thead>
               <tr>
                 <th scope="col">Region</th>
